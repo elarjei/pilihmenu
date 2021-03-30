@@ -26,9 +26,12 @@
     ],
 
     'data': [
+        'views/welcomepage.xml',
         'views/product.xml',
         'views/product-qrcode.xml',
         'views/product-detail.xml',
+        'views/address-form.xml',
+        'views/address-b2b.xml',
         'views/cart-support.xml',
         'views/wizard-checkout.xml',
         'views/order-cart.xml',

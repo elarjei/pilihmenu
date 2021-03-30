@@ -5,9 +5,9 @@
       <xpath expr="//link[last()]" position="after">
         <link rel="stylesheet" type="text/scss" href="/pilihmenu-odoo/static/src/scss/productpage.scss" />
       </xpath>
-      <xpath expr="." position="inside">
+      <!-- <xpath expr="." position="inside">
         <script type="text/javascript" src="/pilihmenu-odoo/static/src/js/productpage.js" />
-      </xpath>
+      </xpath> -->
     </template>
     <template id="products" name="Products">
       <t t-call="website.layout">

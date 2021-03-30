@@ -89,7 +89,7 @@
           <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="alert alert-info">
             Anda belum memesan apapun. Klik tambah pesanan untuk mulai
           </div>
-          <div class="toggle_summary_div d-none d-xl-block">
+          <div class="toggle_summary_div d-xl-block">
             <table class="table table-striped table-sm" id="cart_products" t-if="website_sale_order and website_sale_order.website_order_line">
               <thead>
                 <tr>
@@ -142,9 +142,9 @@
       <xpath expr="//link[last()]" position="after">
         <link rel="stylesheet" type="text/scss" href="/pilihmenu-odoo/static/src/scss/order-cart.scss" />
       </xpath>
-      <xpath expr="." position="inside">
+      <!-- <xpath expr="." position="inside">
         <script type="text/javascript" src="/pilihmenu-odoo/static/src/js/ordercart.js" />
-      </xpath>
+      </xpath> -->
     </template>
   </data>
 </odoo>

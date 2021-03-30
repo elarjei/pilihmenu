@@ -37,7 +37,7 @@
                     </div>
                     <t t-call="website_sale.cart_lines" />
                     <div class="clearfix" />
-                    <a role="button" href="/shop" class="btn btn-secondary mb32 d-none d-xl-inline-block">
+                    <a role="button" href="/shop" class="btn btn-secondary d-none d-xl-inline-block">
                       <span class="fa fa-chevron-left" />
                       <span class="">Tambah Pesanan</span>
                     </a>
@@ -52,7 +52,7 @@
               <div class="col-12 col-xl-4">
                 <t t-call="website_sale.short_cart_summary"/>
                 <div class="d-xl-none mt8">
-                  <a role="button" href="/shop" class="btn btn-secondary mb32">
+                  <a role="button" href="/shop" class="btn btn-secondary">
                     <span class="fa fa-chevron-left" />
                     Tambah Pesanan
                   </a>
