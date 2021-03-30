@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="homepage_inherit_product_display" inherit_id="website.homepage" name="Products" active="True"
+      customize_show="True">
+      <xpath expr="//div[@id='wrap']" position="after">
+        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+        <div class="container mt32 mb32 bukumenu">
+          <section>
+            <div class="product_details">
+              <center>
+                <h1>Menu Restoran Kami</h1>
+              </center>
+            </div>
+            <br />
+            <div class="oe_product_cart_new row">
+              <t t-foreach="website_product_ids" t-as="website_product_id">
+                <div class="card-product col-md-3 col-sm-4 col-xs-6">
+                  <div class='holder-product'>
+                    <a class='button-detail' t-attf-href="/shop/product/#{ slug(website_product_id) }">
+                      <div class="oe_product_image">
+                        <center>
+                          <div class='image-holder'>
+                            <img t-if="website_product_id.image"
+                            t-attf-src="/web/image/product.template/#{website_product_id.id}/image"
+                            class="img oe_product_image" />
+                          </div>
+                          <div class='name-holder'>
+                            <t t-if="website_product_id.name">
+                              <span t-esc="website_product_id.name" class='txt-name' />
+                              <br />
+                            </t>
+                          </div>
+                        </center>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </t>
+            </div>
+          </section>
+        </div>
+      </xpath>
+    </template>
+    <template id="linkto_bukumenu" name="link to bukumenu page" inherit_id="website.homepage">
+      <xpath expr="//div[hasclass('oe_product_cart_new')]" position="after">
+        <a role="button" href="/shop" class="btn btn-secondary linkto-bukumenu">
+          <span class="">Mulai pilihmenu</span>
+        </a>
+      </xpath>
+    </template>
+    <template id="assets_frontend" name="homepage_scss" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/pilihmenu-odoo/static/src/scss/homepage.scss" />
+      </xpath>
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" />
+        <script type="text/javascript" src="/pilihmenu-odoo/static/src/js/homepage.js" />
+      </xpath>
+    </template>
+  </data>
+</odoo>

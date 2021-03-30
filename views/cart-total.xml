@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <!-- cekout: pajak, total, stuff -->
+    <template id="website_sale.short_cart_summary" name="Short Cart right column">
+      <div class="card js_cart_summary" t-if="website_sale_order and website_sale_order.website_order_line" >
+        <div class="card-body">
+          <h4 class="d-xl-block">Total Pesanan</h4>
+          <hr class="d-xl-block"/>
+          <div>
+            <t t-call="website_sale.total">
+              <t t-set='no_rowspan'>1</t>
+            </t>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- verifikasi: total, pajak, & stuff -->
+    <template id="website_sale.total">
+      <div id="cart_total" t-att-class="extra_class or ''" t-if="website_sale_order and website_sale_order.website_order_line">
+        <table class="table">
+          <tr id="empty">
+            <t t-if='not no_rowspan'>
+              <td rowspan="10" class="noborder"/>
+            </t>
+            <td class="col-md-2 col-3 noborder"></td>
+            <td class="col-md-2 col-3 noborder" ></td>
+          </tr>
+          <tr id="order_total_untaxed">
+            <td class="text-right noborder">Subtotal:</td>
+            <td class="text-xl-right noborder" >
+              <span t-field="website_sale_order.amount_untaxed" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+            </td>
+          </tr>
+          <tr id="order_total_taxes">
+            <td class="text-right noborder">Pajak Restoran:</td>
+            <td class="text-xl-right noborder">
+              <span t-field="website_sale_order.amount_tax" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+            </td>
+          </tr>
+          <tr id="order_total">
+            <td class="text-right">
+              <strong>Total:</strong>
+            </td>
+            <td class="text-xl-right">
+              <strong t-field="website_sale_order.amount_total"
+                      t-options='{"widget": "monetary", "display_currency": website_sale_order.pricelist_id.currency_id}'/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </template>
+    <template id="reduction_code" inherit_id="website_sale.total" active="True" customize_show="True" name="Promo Code">
+      <xpath expr="//div[@id='cart_total']//table/tr[last()]" position="replace">
+      </xpath>
+    </template>
+  </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <!-- progress bar pesanan -->
+    <template id="website_sale.wizard_checkout" name="Wizard Checkout">
+      <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
+      <div class="row">
+        <div class="col-xl">
+          <div class="wizard">
+            <div class="progress-wizard">
+              <a class="no-decoration" t-att-href="step&gt;=10 and '/shop/cart' or '#'">
+                <div id="wizard-step10" t-att-class="'progress-wizard-step %s' % (step == 10 and 'active' or step&gt;10 and 'complete' or 'disabled')">
+                  <div class="progress-wizard-bar d-none d-md-block"/>
+                  <span class="progress-wizard-dot d-none d-md-inline-block"></span>
+                  <div class="text-center progress-wizard-steplabel">Cekout Pesanan</div>
+                </div>
+              </a>
+              <a class="no-decoration" t-att-href="step&gt;=20 and '/shop/checkout' or '#'">
+                <div id="wizard-step20" t-att-class="'progress-wizard-step %s' % (step == 20 and 'active' or step&gt;20 and 'complete' or 'disabled')">
+                  <div class="progress-wizard-bar d-none d-md-block"/>
+                  <span class="progress-wizard-dot d-none d-md-inline-block"></span>
+                  <div class="text-center progress-wizard-steplabel">Verifikasi oleh Pelayan</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </data>
+</odoo>

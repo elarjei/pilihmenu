@@ -1,0 +1,26 @@
+.bg-light {
+  background-color: #014940 !important;
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #d2dddc;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #fff !important;
+}
+
+.nav-link.active {
+  color: #62cabe !important;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #62cabe !important;
+}

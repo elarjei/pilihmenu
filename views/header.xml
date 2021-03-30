@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="header" inherit_id="website.layout" name="Link Header Pesanan Pelanggan">
+      <xpath expr="//header//ul/li[@id='my_cart']" position="replace">
+        <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+        <li class="nav-item divider d-none"/>
+        <li id="my_cart" t-attf-class="nav-item#{'' if website_sale_order and website_sale_order.cart_quantity else ' d-none'}">
+          <a href="/shop/cart" class="nav-link">
+            <i class="fa fa-shopping-cart"></i>
+              Pesanan Saya
+            <sup t-attf-class="my_cart_quantity badge badge-primary" t-esc="website_sale_order and website_sale_order.cart_quantity or ''" t-att-data-order-id="website_sale_order and website_sale_order.id or ''"/>
+          </a>
+        </li>
+      </xpath>
+    </template>
+    <template id="header_solor_override" name="header color scheme override" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/pilihmenu-odoo/static/src/scss/header.scss" />
+      </xpath>
+    </template>
+  </data>
+</odoo>

@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700");
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do:400,700");
+
+body {
+  font-family: "Montserrat";
+}
+
+.products_pager {
+  width: 100%;
+  display: inline-block;
+  margin-top: 8px;
+
+  .o_website_sale_search {
+    width: calc(100% - 4px);
+    display: inline-block;
+
+    .input-group > .form-control:not(:last-child) {
+      order: 2;
+      border-radius: 0;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-left: none;
+    }
+
+    .input-group-append {
+      order: 1;
+      margin-left: 4px;
+
+      button {
+        background-color: rgba(1, 73, 64, 0.733);
+        border-right: none;
+        border-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+  }
+
+  .dropdown_sorty_by {
+    margin-left: -4px !important;
+    display: inline-block;
+
+    a {
+      height: 34.5px;
+      margin-bottom: 3px !important;
+      width: 108px;
+      font-family: "Montserrat" !important;
+      font-weight: 400;
+      font-size: 15px;
+      background-color: rgba(1, 73, 64, 0.733);
+      border-radius: 0;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
+
+.nav-link {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #111 !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: rgba(1, 73, 64, 0.733);
+  border-radius: 20px;
+  padding: 4px 16px;
+}
+
+.nav-link.active {
+  color: #eee !important;
+  font-weight: bold;
+}
+
+a {
+  color: #014940;
+}
+
+td.oe_product.oe_grid {
+  border: none;
+
+  .oe_product_cart {
+    position: relative;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 4px;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 8px;
+  }
+}
+
+.oe_product .oe_product_image {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.oe_product.oe_grid section {
+  margin: 4px;
+  padding: 8px 16px;
+  min-height: 64px;
+  border-radius: 8px;
+  background: #e3ecebcc !important;
+
+  h6 {
+    margin-bottom: 4px;
+    a {
+      font-family: "Montserrat" !important;
+      font-weight: 400;
+      font-size: 15px;
+      color: #111;
+    }
+  }
+  div {
+    b {
+      display: block;
+      font-family: "Montserrat" !important;
+      font-weight: 600;
+      font-size: 16px;
+      color: #014940;
+      margin-bottom: 4px !important;
+    }
+  }
+}
+
+a.btn.btn-secondary.btn-sm.a-submit {
+  padding: 4px;
+  border-radius: 16px;
+  display: block;
+  background-color: rgba(1, 73, 64, 0.733);
+  color: #fff;
+}
+
+.img.img-fluid {
+  width: 100%;
+  margin-top: 0 !important;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#products_grid.col-lg-9 .oe-height-2 {
+  height: 240px;
+}
+
+.nav.nav-pills.flex-column.mt16 {
+  margin-top: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  td.oe_product.oe_grid.oe-height-2 {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  td.oe_product.oe_grid .oe_product_cart {
+    margin-top: -8px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+}

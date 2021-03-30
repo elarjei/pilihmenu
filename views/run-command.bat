@@ -1,0 +1,1 @@
+..\..\..\..\python\python.exe ..\..\..\odoo-bin -d pilihmenu_odoo_20210304 -u pilihmenu-odoo -c ..\..\..\odoo.conf

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700");
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do:400,700");
+
+.oe_product_cart_new {
+  overflow: unset;
+}
+
+#wrap > .pb32 {
+  padding-bottom: 0 !important;
+}
+
+.s_hr hr {
+  border-top-color: #e3eceb;
+}
+
+font {
+  font-family: "Montserrat" !important;
+  font-weight: 200;
+  color: #014940;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.product_details {
+  h1 {
+    font-family: "Nothing You Could Do" !important;
+  }
+}
+
+.card-product {
+  margin-bottom: 4px;
+  padding: 0 4px 4px 4px;
+  border-radius: 8px;
+
+  .holder-product {
+    border: 1px solid #e3eceb;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 100%;
+
+    .oe_product_image {
+      .image-holder {
+        width: 100%;
+        height: 145px;
+        overflow: hidden;
+
+        .oe_product_image {
+          padding: 0px;
+          margin: 0px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+
+      .name-holder {
+        width: 84%;
+        left: 8%;
+        text-align: left;
+        margin: 12px 15px 8px 15px;
+
+        .txt-name {
+          font-family: "Montserrat" !important;
+          font-weight: bolder;
+          font-size: 16px;
+          color: #014940;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 380px) and (max-width: 576px) {
+  .col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+header.o_header_affix.affix,
+header.o_header_affix.affix.affixed {
+  display: none;
+}
+
+.linkto-bukumenu {
+  margin: 0 auto;
+  margin-top: 8px;
+  max-width: 480px;
+  display: block;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: hsla(173, 97%, 15%, 0.733);
+}
