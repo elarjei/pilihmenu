@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <!-- Bottom button & styling -->
+    <template id="linkto_bukumenu" name="link to bukumenu page" inherit_id="website.homepage">
+      <xpath expr="//div[@id='products_showcase']" position="after">
+        <a role="button" href="/shop" class="btn btn-secondary linkto-bukumenu">
+          <span class="">Mulai pilihmenu</span>
+        </a>
+      </xpath>
+    </template>
+    <template id="assets_frontend" name="homepage_scss" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/pilihmenu-odoo/static/src/scss/homepage.scss" />
+      </xpath>
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" />
+        <script type="text/javascript" src="/pilihmenu-odoo/static/src/js/homepage.js" />
+      </xpath>
+    </template>
+  </data>
+</odoo>

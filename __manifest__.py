@@ -36,6 +36,7 @@
         'views/header.xml',
         'views/footer.xml',
         'views/homepage.xml',
+        'views/homepage-extends.xml',
     ],
 
     'demo': [
