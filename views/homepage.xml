@@ -13,7 +13,7 @@
               </center>
             </div>
             <br />
-            <div class="oe_product_cart_new row">
+            <div id="products_showcase" class="oe_product_cart_new row">
               <t t-foreach="website_product_ids" t-as="website_product_id">
                 <div class="card-product col-md-3 col-sm-4 col-xs-6">
                   <div class='holder-product'>
@@ -43,7 +43,7 @@
       </xpath>
     </template>
     <template id="linkto_bukumenu" name="link to bukumenu page" inherit_id="website.homepage">
-      <xpath expr="//div[hasclass('oe_product_cart_new')]" position="after">
+      <xpath expr="//div[@id='products_showcase']" position="after">
         <a role="button" href="/shop" class="btn btn-secondary linkto-bukumenu">
           <span class="">Mulai pilihmenu</span>
         </a>
